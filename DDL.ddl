@@ -61,7 +61,8 @@ intel int,
 per int,
 chr int,
 sp int,
-ar int
+ar int,
+des varchar(100)
 );
 
 create table Skill(
@@ -72,21 +73,27 @@ des varchar(250)
 
 create table Item(
 name varchar(100) primary key,
-des varchar(250)
+des varchar(250),
+req varchar(100),
+foreign key (req) references requirment (name)
 );
 
 create table Weapon(
 name varchar(100) primary key,
 dmg int,
 type varchar(50),
-des varchar(250)
+des varchar(250),
+req varchar(100),
+foreign key (req) references requirment (name)
 );
 
 create table Armor(
 name varchar(100) primary key,
 ar int,
 type varchar(50),
-des varchar(250)
+des varchar(250),
+req varchar(100),
+foreign key (req) references requirment (name)
 );
 
 create table Ability(
@@ -189,9 +196,9 @@ foreign key(armor) references Armor(name)
 create table itemEquip(
 name varchar(100),
 item varchar(100),
+equiped int,
 foreign key(name) references Creature(name),
 foreign key(item) references Item(name)
 );
-
 
 

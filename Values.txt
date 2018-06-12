@@ -1,24 +1,24 @@
 
+
 insert into Creature values('Jack','male','human',25,2,100,0,5,3,2,3,3,3,0);
 insert into Creature values('Jane','female','human',25,2,100,0,5,3,2,3,3,3,0);
 
+insert into Weapon (name,dmg,type,des)values('Short Sword',10,'1hSword','simple sword for fighting');
 
-insert into Weapon values('Short Sword',10,'1hSword','simple sword for fighting');
+insert into Armor (name,ar,type,des)values('Chainmail',5,'underarmor','16 gage chain linked together, protects well against bladed');
 
-insert into Armor values('Chainmail',5,'underarmor','16 gage chain linked together, protects well against bladed');
-
-insert into Item values('Heal potion','recovers moderate health');
+insert into Item (name,des)values('Heal potion','recovers moderate health');
 
 insert into Buff values('Charm+2',0,0,0,0,0,0,2,0,0);
 
 
 insert into Ability values('Charming','Charm+2',0,0,null,'Charming individual people are drawn to you','Social');
 
-insert into Skill values('Equestrian','Allows riding of horses');
+insert into Skill values('Equestrian',1,'Allows riding of horses');
 
 insert into creatureAbility values('Jack','Charming');
 
-insert into creatureSkill values('Jack','Equestrian',2);
+insert into creatureSkill values('Jack','Equestrian');
 
 insert into weaponEquip values('Jack','Short Sword',1);
 
