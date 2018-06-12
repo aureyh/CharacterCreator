@@ -14,9 +14,19 @@ insert into Buff values('Charm+2',0,0,0,0,0,0,2,0,0);
 
 insert into Ability values('Charming','Charm+2',0,0,null,'Charming individual people are drawn to you','Social');
 
+
+insert into requirment (name,des) values ("Bladed Weapon", "Bladed Weapon is equiped");
+
+insert into Ability (name,dmg,req,des,catagory) values ("Slash",10,"Bladed Weapon","Slash with equiped bladed weapon","Weapon Attack");
+
+
 insert into Skill values('Equestrian',1,'Allows riding of horses');
 
+
 insert into creatureAbility values('Jack','Charming');
+
+
+insert into creatureAbility values ("Jack","Slash");
 
 insert into creatureSkill values('Jack','Equestrian');
 
